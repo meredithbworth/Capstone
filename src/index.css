@@ -23,11 +23,11 @@ a:hover {
 }
 
 body {
+  height: 100vh;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 10px;
+
+  background: no-repeat center/auto 100% url("app/tara-clark-a4Vow2p6AXE-unsplash.jpg");
 }
 
 h1 {
