@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect} from "react;"
-
+import ProductRow from './ProductRow';
 
 
 export default function ProductsList({setSelectedProductId, product}) {
@@ -12,6 +12,7 @@ export default function ProductsList({setSelectedProductId, product}) {
         async function fetchProducts() {
         try {
             const response = await fetch('https://fakestoreapi.com/products');
+            console.log(response);
             const result = await response.json();  
             setContacts(result); 
             // console.log(contacts);          
@@ -31,13 +32,12 @@ export default function ProductsList({setSelectedProductId, product}) {
           </thead>
           <tbody>
             <tr>
-              <td>Name</td>
-              <td>Email</td>
-              <td>Phone</td>
+              <td>Title</td>
+              <td>Price</td>
+              <td>Category</td>
             </tr>
             { products.map((product) => {
-              //By fetching individual contact list by ID, we'll be adding an 
-            //   return <ProductRow key={contact.id} contact={contact} setSelectedContactId={setSelectedContactId}/>
+              return <ProductRow key={product.id} product={product} setSelectedProductId={setSelectedProductId}/>
             })
              }
           </tbody>
