@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect} from "react;"
-import ProductRow from './ProductRow';
+// import ProductRow from './ProductRow';
 
 
 export default function ProductsList({setSelectedProductId, product}) {
